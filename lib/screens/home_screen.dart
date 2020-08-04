@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syaamilebook/constants.dart';
+import 'package:syaamilebook/screens/details_screen.dart';
 import 'package:syaamilebook/widgets/book_rating.dart';
 import 'package:syaamilebook/widgets/reading_card_list.dart';
 import 'package:syaamilebook/widgets/two_side_rounded_button.dart';
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                           title: "Top Ten Business Hack",
                           auth: "Herman Joel",
                           rating: 4.8,
-                          pressDetails: () {},
+                          pressDetails: () {print("aaa");},
                           pressRead: () {},
                         ),
                         SizedBox(
