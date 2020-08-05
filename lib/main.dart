@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syaamilebook/constants.dart';
+import 'package:syaamilebook/screens/details_screen.dart';
 import 'package:syaamilebook/screens/home_screen.dart';
 import 'package:syaamilebook/widgets/rounded_button.dart';
 
@@ -20,6 +21,10 @@ class MyApp extends StatelessWidget {
                 displayColor: kBlackColor,
               )),
       home: WelcomeScreen(),
+      routes: <String, WidgetBuilder>{
+        '/home' : (BuildContext context) => new HomeScreen(),
+        '/detail' : (BuildContext context) => new DetailsScreen(),
+      },
     );
   }
 }
@@ -56,9 +61,7 @@ class WelcomeScreen extends StatelessWidget {
                 text: "start reading",
                 fontSize: 20,
                 press: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }));
+                  Navigator.pushNamed(context, '/detail');
                 },
               ),
             ),

@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                           title: "Top Ten Business Hack",
                           auth: "Herman Joel",
                           rating: 4.8,
-                          pressDetails: () {print("aaa");},
+                          pressDetails: () {},
                           pressRead: () {},
                         ),
                         SizedBox(
