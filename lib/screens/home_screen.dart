@@ -54,7 +54,16 @@ class HomeScreen extends StatelessWidget {
                           title: "Crushing and Influence",
                           auth: "Gery Venchuk",
                           rating: 4.9,
-                          pressDetails: () {},
+                          pressDetails: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return DetailsScreen();
+                                },
+                              ),
+                            );
+                          },
                           pressRead: () {},
                         ),
                         ReadingListCard(
@@ -114,7 +123,6 @@ class HomeScreen extends StatelessWidget {
                                 offset: Offset(0, 10),
                                 blurRadius: 33,
                                 color: Color(0xFFD3D3D3).withOpacity(.84),
-
                               ),
                             ],
                           ),
@@ -125,24 +133,31 @@ class HomeScreen extends StatelessWidget {
                               children: <Widget>[
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsets.only(left: 30, right: 20),
+                                    padding: const EdgeInsets.only(
+                                        left: 30, right: 20),
                                     child: Row(
                                       children: <Widget>[
                                         Expanded(
                                           child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: <Widget>[
                                               Text(
                                                 "Crushing and Influence",
-                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               ),
                                               Text(
                                                 "Gery Vechuk",
-                                                style: TextStyle(color: kLightBlackColor),
+                                                style: TextStyle(
+                                                    color: kLightBlackColor),
                                               ),
                                               Align(
-                                                alignment: Alignment.bottomRight,
+                                                alignment:
+                                                    Alignment.bottomRight,
                                                 child: Text(
                                                   "Chapter 7 of 10",
                                                   style: TextStyle(
@@ -151,11 +166,16 @@ class HomeScreen extends StatelessWidget {
                                                   ),
                                                 ),
                                               ),
-                                              SizedBox(height: 5,),
+                                              SizedBox(
+                                                height: 5,
+                                              ),
                                             ],
                                           ),
                                         ),
-                                        Image.asset("assets/images/book-1.png", width: 55,)
+                                        Image.asset(
+                                          "assets/images/book-1.png",
+                                          width: 55,
+                                        )
                                       ],
                                     ),
                                   ),
@@ -167,13 +187,14 @@ class HomeScreen extends StatelessWidget {
                                     color: kProgressColor,
                                     borderRadius: BorderRadius.circular(7),
                                   ),
-
                                 ),
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(height: 40,),
+                        SizedBox(
+                          height: 40,
+                        ),
                       ],
                     ),
                   ),

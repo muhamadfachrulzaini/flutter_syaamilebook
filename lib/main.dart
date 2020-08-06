@@ -61,7 +61,7 @@ class WelcomeScreen extends StatelessWidget {
                 text: "start reading",
                 fontSize: 20,
                 press: () {
-                  Navigator.pushNamed(context, '/detail');
+                  Navigator.pushNamed(context, '/home');
                 },
               ),
             ),
